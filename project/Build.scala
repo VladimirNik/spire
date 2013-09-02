@@ -52,7 +52,8 @@ object MyBuild extends Build {
 
     scalaVersion := "2.10.2",
 
-
+    libraryDependencies += compilerPlugin("test.org" %% "printplugin" % "1.0"),
+    scalacOptions += "-P:printplugin:oversrc",
 
     // disable annoying warnings about 2.10.x
     conflictWarning in ThisBuild := ConflictWarning.disable,
