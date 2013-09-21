@@ -52,7 +52,7 @@ object MyBuild extends Build {
 
     scalaVersion := "2.10.2",
 
-    libraryDependencies += compilerPlugin("test.org" %% "printplugin" % "1.0"),
+    libraryDependencies += compilerPlugin("org.scala-lang.plugins" %% "printplugin" % "0.2.0"),
     scalacOptions += "-P:printplugin:oversrc",
 
     // disable annoying warnings about 2.10.x
